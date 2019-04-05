@@ -11,7 +11,6 @@
                 <thead>
                 <tr>
                     <th>Name</th>
-                    <th>Slug</th>
                     <th>Image</th>
                     <th>Updated</th>
                     <th>&nbsp;</th>
