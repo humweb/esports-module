@@ -40,14 +40,16 @@ class MapsController extends AbstractCrudController
         ]
     ];
 
-//    protected $validationAttributes = [
-//        'parent_id' => 'project id'
-//    ];
 
+    public function beforeGetIndex()
+    {
+        $this->setTitle('Maps');
+        $this->crumb('Maps', '/admin/maps');
+    }
     /**
      * @var array
      */
-    protected $dispatchable = [//'postCreate' => CreateArea::class
+    protected $dispatchable = [
     ];
 
     /**

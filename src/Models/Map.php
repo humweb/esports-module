@@ -25,17 +25,4 @@ class Map extends Model implements HasMedia
         'name',
         'game_id',
     ];
-
-
-//    public function __construct(array $attributes = [])
-//    {
-//        parent::__construct($attributes);
-//
-//        $this->slugOptions = [
-//            'maxlen'     => 200,
-//            'unique'     => true,
-//            'slug_field' => 'slug',
-//            'from_field' => 'name',
-//        ];
-//    }
 }

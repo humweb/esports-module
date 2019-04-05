@@ -66,20 +66,27 @@ class ServiceProvider extends ModuleBaseProvider
     }
 
 
-//    public function getAdminMenu()
-//    {
-//        return [
-//            'Content' => [
-//                [
-//                    'label'    => 'Posts',
-//                    'url'      => route('get.admin.blog.posts'),
-//                    'icon'     => '<i class="fa fa-book"></i>',
-//                    'children' => [
-//                        ['label' => 'List', 'url' => route('get.admin.blog.posts')],
-//                        ['label' => 'Create', 'url' => route('get.admin.blog.posts.create')],
-//                    ],
-//                ],
-//            ],
-//        ];
-//    }
+    public function getAdminMenu()
+    {
+        return [
+            'E-sports' => [
+                [
+                    'label'    => 'Games',
+                    'url'      => route('admin.get.games.index'),
+                    'icon'     => '<i class="fa fa-gamepad"></i>',
+                    'children' => [
+                        ['label' => 'List', 'url' => route('admin.get.games.create')],
+                    ],
+                ],
+                [
+                    'label'    => 'Maps',
+                    'url'      => route('admin.get.maps.index'),
+                    'icon'     => '<i class="fa fa-map"></i>',
+                    'children' => [
+                        ['label' => 'List', 'url' => route('admin.get.maps.create')],
+                    ],
+                ],
+            ],
+        ];
+    }
 }

@@ -55,6 +55,12 @@ class GamesController extends AbstractCrudController
     protected $redirectRoute = 'admin.get.games.index';
 
 
+    public function beforeGetIndex()
+    {
+        $this->setTitle('Games');
+        $this->crumb('Games', '/admin/games');
+    }
+
     public function beforeGetCreate()
     {
 //        $this->beforeGetEdit();
