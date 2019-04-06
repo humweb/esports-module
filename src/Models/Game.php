@@ -38,4 +38,26 @@ class Game extends Model implements HasMedia
             'from_field' => 'name',
         ];
     }
+    public function registerMediaConversions(Media $media = null)
+    {
+        $this->addMediaConversion('xs')
+             ->width(25)
+             ->height(25)
+             ->performOnCollections('image');
+
+        $this->addMediaConversion('sm')
+             ->width(40)
+             ->height(40)
+             ->performOnCollections('image');
+
+        $this->addMediaConversion('sm')
+             ->width(50)
+             ->height(50)
+             ->performOnCollections('image');
+
+        $this->addMediaConversion('sm')
+             ->width(100)
+             ->height(100)
+             ->performOnCollections('image');
+    }
 }

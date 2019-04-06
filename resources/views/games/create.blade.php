@@ -14,6 +14,11 @@
                 {!! Form::file('image', ['class' => 'form-control-file']); !!}
             </div>
 
+            <div class="form-group">
+                <label for="">Banner</label>
+                {!! Form::file('banner', ['class' => 'form-control-file']); !!}
+            </div>
+
         </div>
         <div class="card-footer">
             <a href="#" class="btn btn-secondary">Cancel</a>
