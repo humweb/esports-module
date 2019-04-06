@@ -4,13 +4,15 @@ use Humweb\Core\Data\Traits\SluggableTrait;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\MediaLibrary\HasMedia\HasMediaTrait;
 use Spatie\MediaLibrary\HasMedia\Interfaces\HasMedia;
+use Spatie\MediaLibrary\HasMedia\Interfaces\HasMediaConversions;
+use Spatie\MediaLibrary\Media;
 
 /**
  * Post
  *
  * @package Humweb\Blog\Models
  */
-class Game extends Model implements HasMedia
+class Game extends Model implements HasMedia, HasMediaConversions
 {
     use SluggableTrait, HasMediaTrait;
 
@@ -38,6 +40,13 @@ class Game extends Model implements HasMedia
             'from_field' => 'name',
         ];
     }
+
+
+    /**
+     * @param  \Spatie\MediaLibrary\Media|null  $media
+     *
+     * @throws \Spatie\Image\Exceptions\InvalidManipulation
+     */
     public function registerMediaConversions(Media $media = null)
     {
         $this->addMediaConversion('xs')
